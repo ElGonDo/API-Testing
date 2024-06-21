@@ -22,8 +22,8 @@ app.get('/', async (req, res) => {
 });
 
 app.post('/registro', async (req, res) => {
-  const { Nombres, Apellidos, Correo, Telefono, Contrasena } = req.body;
-  const registro = { Nombres, Apellidos, Correo, Telefono, Contrasena };
+  const { nombre, correo, numero  } = req.body;
+  const registro = { nombre, correo, numero };
 
   try {
     const connection = await pool.getConnection();
